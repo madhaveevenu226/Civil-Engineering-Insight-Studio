@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Securely fetch API Key from .env
-api_key = os.getenv("AIzaSyAQW5F2H-0ACcQb09zKxFxa5SFVZCbfRXY") 
+api_key = os.getenv("Google API KEY HERE") 
 client = genai.Client(api_key=api_key)
 
 @st.cache_data(show_spinner=False)
@@ -89,4 +89,5 @@ if submit:
             # Export Option
             st.download_button("Save Report", response, file_name="site_inspection.txt")
     else:
+
         st.warning("Please upload a site image to begin.")
